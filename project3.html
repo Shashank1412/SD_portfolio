@@ -53,6 +53,14 @@
         font-size: 21px;
       }
 
+      .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
       .content {
         text-align: justify;
         font-family: arial !important;
@@ -121,14 +129,14 @@
 
         <section id="work-section" class="s-work-section target-section">
 
-          <div class="row mb-8 align-items-center" style="max-width: 1500px;">
+          <div class="row mb-8 align-items-center unselectable" style="max-width: 1500px;">
             <div class="col-md-8" data-aos="fade-up">
               <h1 class="heading" style="font-size: 30px;text-transform: uppercase">Traditional Hand Embroideries of India</h1>
               <!-- <h3 style="margin-top:0%;font-size: 18px;" class="heading">Normal - Spring-Summer’22 collection for Brand W</h3> -->
             </div>
           </div>
 
-          <div class="row align-items-stretch" style="max-width: 1500px;">
+          <div class="row align-items-stretch unselectable" style="max-width: 1500px;">
             <div class="col-md-8" data-aos="fade-up">
               <!-- <img src="img/img_1_big.jpg" alt="Image" class="img-fluid"> -->
               <div class="owl-carousel testimonial-carousel">
@@ -283,7 +291,16 @@
             <script src="vendor/isotope/isotope.pkgd.min.js"></script>
             <script src="vendor/aos/aos.js"></script>
             <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-
+            <script>
+              (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                  'gtm.start':
+                  new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+              })(window, document, 'script', 'dataLayer', 'GTM-MDBFDQ5');
+            </script>
             <!-- Template Main JS File -->
             <script src="js/portfolio-main.js"></script>
             <script src="js/jquery-3.2.1.min.js"></script>

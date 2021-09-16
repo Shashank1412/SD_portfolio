@@ -52,6 +52,16 @@
         line-height: 20px;
         font-size: 21px;
       }
+      .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      img {
+        pointer-events: none;
+      }
       .content{
         text-align: justify;
         font-family: arial!important;
@@ -61,7 +71,7 @@
     </style>
   </head>
 
-  <body id="top" style="overflow-x: hidden;">
+  <body id="top" style="overflow-x: hidden;" onmousedown="return false" onselectstart="return false">
 
 
     <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
@@ -119,7 +129,7 @@
 
 
         <section id="work-section" class="s-work-section target-section" style="width:101%">
-          <div class="row">
+          <div class="row unselectable">
             <div class="col-md-8" data-aos="fade-up">
               <h1 class="heading" style="font-size: 30px;">TIE & DYE TECHNIQUES</h1>
             </div>
@@ -143,7 +153,7 @@
                 </ul>
               </div>
             </div>
-            <div class="row">
+            <div class="row unselectable">
               <div class="col-md-8" data-aos="fade-up">
                 <h3 class="h3 mb-3"><b>Method:</b></h3>
               </div>
@@ -170,7 +180,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="row" style="margin-top: -2%;">
+                  <div class="row unselectable" style="margin-top: -2%;">
                     <div class="col-md-8" data-aos="fade-up">
                       <h3 class="h3 mb-3"><b class="heading">Final Design(Turmeric):</b></h3>
                     </div>
@@ -313,6 +323,31 @@
                   function redirect(location){
                     window.location.assign(location)
                   }
+                  var message = "Right-click has been disabled";
+                    function clickIE() {
+                      if (document.all) {
+                        (message);
+                        return false;
+                      }
+                    }
+                    function clickNS(e) {
+                      if (document.layers || (document.getElementById && !document.all)) {
+                        if (e.which == 2 || e.which == 3) {
+                          (message);
+                          return false;
+                        }
+                      }
+                    }
+                    if (document.layers) {
+                      document.captureEvents(Event.MOUSEDOWN);
+                      document.onmousedown = clickNS;
+                    } else {
+                      document.onmouseup = clickNS;
+                      document.oncontextmenu = clickIE;
+                    }
+                    document.oncontextmenu = new Function("return false");
+                    document.getElementsByClassName('my-img').ondragstart = function () { return false; };
+
 
                 </script>
               </body>

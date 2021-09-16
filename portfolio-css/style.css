@@ -207,6 +207,10 @@ h6,
   background: #000;
 }
 
+img {
+  pointer-events: none;
+}
+
 .testimonial-carousel .owl-dots {
   position: absolute;
   bottom: 25px;

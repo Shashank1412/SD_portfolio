@@ -27,13 +27,31 @@
           <!-- script
             ================================================== -->
             <script src="js/modernizr.js"></script>
+            <script src="ga.js"></script>
             <script src="js/pace.min.js"></script>
-
+            <script>
+              (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                  'gtm.start':
+                  new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+              })(window, document, 'script', 'dataLayer', 'GTM-MDBFDQ5');
+            </script>
             <!-- favicons
               ================================================== -->
               <link rel="shortcut icon" href="font.png" type="image/x-icon">
               <link rel="icon" href="font.png" type="image/x-icon">
-
+              <style>
+                .unselectable {
+                  -webkit-user-select: none;
+                  -webkit-touch-callout: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+                }
+              </style>
             </head>
 
             <body id="top">
@@ -68,7 +86,7 @@
                     <div class="overlay"></div>
                     <div class="shadow-overlay"></div>
 
-                    <div class="home-content">
+                    <div class="home-content unselectable">
 
                       <div class="row home-content__main">
 
@@ -133,7 +151,7 @@
                         </div>
                       </div>
 
-                      <div class="row about-content">
+                      <div class="row about-content unselectable">
 
                         <div class="col-six tab-full left">
                           <h3>Howdy!</h3>
@@ -194,7 +212,7 @@
 
                         </div> <!-- end about-content buttons -->
 
-                        <div class="row about-content about-content--timeline">
+                        <div class="row about-content about-content--timeline unselectable">
 
                           <div class="col-full text-center">
                             <h3>My Work Experience.</h3>
@@ -271,7 +289,7 @@
                           ================================================== -->
                           <section id="works" class="s-works target-section">
 
-                            <div class="row narrow section-intro has-bottom-sep">
+                            <div class="row narrow section-intro has-bottom-sep unselectable">
                               <div class="col-full">
                                 <h3>Portfolio</h3>
                                 <h1>See Highlights Of My Projects.</h1>
@@ -280,7 +298,7 @@
                               </div>
                             </div>
 
-                            <div class="row masonry-wrap">
+                            <div class="row masonry-wrap unselectable">
                               <div class="masonry">
 
                                 <div class="masonry__brick">

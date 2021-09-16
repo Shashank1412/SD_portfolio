@@ -4132,6 +4132,10 @@ article.blog-single .blog-content {
     }
 }
 
+img {
+    pointer-events: none;
+}
+
 @media only screen and (max-width: 600px) {
     #comments h3 {
         text-align: center;

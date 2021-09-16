@@ -52,6 +52,13 @@
         line-height: 20px;
         font-size: 21px;
       }
+      .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
       .content {
         text-align: justify;
@@ -138,7 +145,7 @@
 
         </header> -->
         <section id="works" class="s-works target-section" style="width: 101%;">
-          <div class="row mb-5 align-items-center">
+          <div class="row mb-5 align-items-center" id="unselectable">
             <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
               <!-- <h2>Hey, I'm Sonal Dalvi</h2> -->
               <!-- <p class="mb-0">Fashion &amp; Designer</p> -->
@@ -153,7 +160,7 @@
               </div>
             </div>
           </div>
-          <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+          <div id="portfolio-grid unselectable" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
             <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
               <a href="work-single.html" class="item-wrap fancybox">
                 <div class="work-info">
@@ -587,7 +594,16 @@
         <script src="vendor/isotope/isotope.pkgd.min.js"></script>
         <script src="vendor/aos/aos.js"></script>
         <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-
+        <script>
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+              'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-MDBFDQ5');
+        </script>
         <!-- Template Main JS File -->
         <script src="js/portfolio-main.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
